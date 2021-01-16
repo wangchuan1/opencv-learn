@@ -36,6 +36,6 @@ outputVideo.release();
   30-40分贝，越大越好
 		PSNR（）
     
-   结构相似度（0-1 越大越好）  tructural  similarity  index
+   SSIM结构相似度（0-1 越大越好）  tructural  similarity  index
 
 
