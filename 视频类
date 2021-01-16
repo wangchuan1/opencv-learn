@@ -12,4 +12,27 @@ grab()
 get()  CV_CAP_PROP_FRAME_FPS/HEIGHT/WIDTH
 set()
 read()
-函数重载 >> 
+
+
+
+
+	VideoWriter outputVideo;
+	cv::Size videoResolution = cv::Size((int)inputVideo.get(CV_CAP_PROP_FRAME_WIDTH), (int)inputVideo.get(CV_CAP_PROP_FRAME_HEIGHT));
+	// open方法相关设置 
+	outputVideo.open(outputVideoPath, -1, 25.0,videoResolution, true);
+	if (!outputVideo.isOpened())
+
+	
+			cv::split(frameImg, rgb);
+
+					// 提取B通道分量
+					rgb[i] = cv::Mat::zeros(videoResolution,rgb[0].type());
+
+				// 通道合并
+				cv::merge(rgb, resultImg);
+
+			outputVideo << resultImg;
+
+	
+	inputVideo.release();
+	outputVideo.release();
