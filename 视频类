@@ -29,3 +29,13 @@ outputVideo << resultImg;
 inputVideo.release();
 outputVideo.release();
 
+
+图像的质量评价
+  //峰值信噪比 PSNR peak signal  to  noise ratio z值越大越好
+	//均方误差（mean-square error, MSE）是反映估计量与被估计量之间差异程度的一种度量
+  30-40分贝，越大越好
+		PSNR（）
+    
+   结构相似度（0-1 越大越好）  tructural  similarity  index
+
+
