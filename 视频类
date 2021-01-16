@@ -1,0 +1,15 @@
+videoCapture 这是视频的类名
+类有三个构造函数
+VideoCapture::videocapture()
+videocapture::videocapture(const string &filename)
+videocapture:: videocapture(int device)
+
+类的方法有：
+open()
+release()
+isOpened()
+grab()
+get()  CV_CAP_PROP_FRAME_FPS/HEIGHT/WIDTH
+set()
+read()
+函数重载 >> 
