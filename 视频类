@@ -39,3 +39,28 @@ outputVideo.release();
    SSIM结构相似度（0-1 越大越好）  tructural  similarity  index
 
 
+界面事件
+鼠标事件
+第一步主程序启用回调函数
+	namedWindow(windowname,1);
+	
+	setMouseCallback(windowname, onmouse, 0);
+	imshow(windowname, srcImage);
+	
+第二部在回调函数中设置
+void onmouse(int event, int x,int y ,int flag,void *data) {
+
+	Mat tempImage = srcImage.clone();
+
+	if (event == CV_EVENT_LBUTTONDOWN) {
+		p = tempImage.at<Vec3b>(y,x);
+		sprintf(text, " b = %d,g = %d,r =%d", p[0], p[1], p[2]);
+		putText(tempImage, text, Point(10, 60), FONT_HERSHEY_PLAIN, 2, Scalar(0, 0, 255))		
+	}
+
+		sprintf(text, "H=%d, S=%d, V=%d", p[0], p[1], p[2]);
+
+
+
+  }
+
