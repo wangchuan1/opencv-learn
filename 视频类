@@ -64,3 +64,20 @@ void onmouse(int event, int x,int y ,int flag,void *data) {
 
   }
 
+
+void onchange(int pos1, void *data) {
+	
+	// 强制类型转换
+	cv::Mat srcImage = *(cv::Mat*)(data);
+	// 根据滑动条的值进行二值化
+	cvtColor(srcImage, dstImage, CV_RGB2GRAY);
+	cv::threshold(dstImage, dstImage, pos1, 255, 0);
+}
+
+
+
+
+	//调用滑动条函数
+	int  i = 100;
+	createTrackbar("pos", windowname, 0, 255, onchange, &srcImage);
+	createTrackbar("pos1", windowname,&i, 500, onchange, &srcImage);
